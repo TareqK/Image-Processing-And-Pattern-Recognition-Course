@@ -41,17 +41,17 @@ The core concept of image processing is taking an image and returning an image i
 
 Going into depth, the process has 5 parts : 
 
-- Image Acquisition and Preprocessing : The first step of the process, this is about selecting our images.
+- Image Acquisition and Preprocessing : The First step of the process, this is about selecting our images.
 
 - Image Segmentation and Analysis : Extracting certain regions of an image and analyzing the objects in them, the 
 *semantics* of the image, and its description.
 
 - Feature Extraction : Extracting some characteristics from an image for a certain purpose.
 
-- Application of Image Processing : things such as Image Classification,
+- Application of Image Processing : Things such as Image Classification,
 Face Detection, Face Recognition, Optical Character Recognition, License Plate Recognition, etc.
 
-- Post processing : modifying images in a certain way such as contrast adjustment .
+- Post processing : Modifying images in a certain way such as contrast adjustment .
 
 ## What Do we need to Know to Get Started with Image Processing?
 
