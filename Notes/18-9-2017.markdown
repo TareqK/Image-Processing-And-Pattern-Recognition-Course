@@ -1,0 +1,31 @@
+# Introduction 
+
+Digital Image processing refers to processing digital images by 
+mean of a digital computer. It is a branch of machine learning and AI that goes into
+the process of extracting useful data from images or modifying images in a certain way. 
+
+## The Work flow of Image Processing
+
+- Image Acquisition and Preprocessing : The first step of the process, this is about selecting our images.
+
+- Image Segmentation and Analysis : Extracting certain regions of an image and analyzing the objects in them, the 
+*Semantics* of the image, and its description.
+
+- Feature Extraction : Extracting some characteristics from an image for a certain purpose.
+
+- Applications of Image Processing : These could be things such as Image Classification,
+Face Detection, Face Recognition, Optical Character Recognition, License Plate Recognition, etc.
+
+- Post processing : modifying images in a certain way such as contrast adjustment .
+
+## What Do we need to Know to Get Started with Image Processing?
+
+- Maths! It's very important to know linear algebra, since all images are
+technically matrices, any process we do on an image is a linear algebra
+operation.
+
+- MATLAB(or another similar software). It's what we are going to be mostly use for experimenting.
+  
+
+
+
