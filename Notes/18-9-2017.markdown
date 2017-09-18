@@ -27,7 +27,7 @@ whiteness of that point).
 
 ## Levels of Image Processing
 
-- Image Processing(Low): inputs and outputs are images(enhancement, compression, feature detection, restoration, noise removal, etc).
+- Image Processing(Low) : inputs and outputs are images(enhancement, compression, feature detection, restoration, noise removal, etc).
 
 - Image Analysis(Mid) : outputs are attributes extracted from images(matching, segmentation, registration, etc).
 
@@ -76,7 +76,8 @@ There are many real world applications in image processing in many fields such a
 
 - GIS(Geographic Information Systems): Hurricane Recognition in Meteorology.
 
-- Law Enforcement : Speed Cameras, Plate Recognition, Face Recognition, Fingerprint Recognition, Gesture Recognition. 
+- Law Enforcement : Speed Cameras, Plate Recognition, Face Recognition, Fingerprint Recognition, Gesture Recognition,
+Suspect Tracking, etc. 
  
 
 
