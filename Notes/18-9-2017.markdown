@@ -2,9 +2,44 @@
 
 Digital Image processing refers to processing digital images by 
 mean of a digital computer. It is a branch of machine learning and AI that goes into
-the process of extracting useful data from images or modifying images in a certain way. 
+the process of extracting useful data from images or modifying images in a certain way. Image processing
+aims at improving images for better human interpretation of their content in many ways. Examples of this 
+are printing, enhancement, editing, and compression. 
+
+## What is an Image?
+
+> An Image is a Visual Representation in the Form of a Function.
+
+- Images are generally defined over rectangular areas, and is a **matrix**.
+
+- Images can be matrices of intensity of Grey or color values.
+
+- This function is a 2D function f(x,y), where x and y are spatial coordinates. The origin is the **Top Left** corner
+of the image. 
+
+- The amplitude of f at any pair(x,y) is called the intensity or the Grey level of the image at that point(the blackness or 
+whiteness of that point).
+
+- Each pair (x,y) in the matrix is called a **pixel**. 
+  - The higher the pixel count, the better the quality of the image, but the larger it is in size and the harder it is to process. 
+  - Digitizing an image causes an image to become an approximation of the real scene. Digitization is done using its own algorithm,
+   and there is some loss of features and values when digitizing a real image. 
+
+## Levels of Image Processing
+
+- Low Level: inputs and outputs are images
+
+- Mid Level : outputs are attributes extracted from images
+
+- High Level : an ensemble of objects extracted from images
 
 ## The Work flow of Image Processing
+
+The core concept of image processing is taking an image and returning an image ie,
+>
+ Input-> Image, Output -> Image
+
+Going into depth, the process has 5 parts : 
 
 - Image Acquisition and Preprocessing : The first step of the process, this is about selecting our images.
 
@@ -13,7 +48,7 @@ the process of extracting useful data from images or modifying images in a certa
 
 - Feature Extraction : Extracting some characteristics from an image for a certain purpose.
 
-- Applications of Image Processing : These could be things such as Image Classification,
+- Application of Image Processing : things such as Image Classification,
 Face Detection, Face Recognition, Optical Character Recognition, License Plate Recognition, etc.
 
 - Post processing : modifying images in a certain way such as contrast adjustment .
