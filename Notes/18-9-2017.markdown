@@ -36,8 +36,8 @@ whiteness of that point).
 ## The Work flow of Image Processing
 
 The core concept of image processing is taking an image and returning an image ie,
->
- Input-> Image, Output -> Image
+
+> Input-> Image, Output -> Image
 
 Going into depth, the process has 5 parts : 
 
