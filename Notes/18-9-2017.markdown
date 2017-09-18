@@ -27,13 +27,13 @@ whiteness of that point).
 
 ## Levels of Image Processing
 
-- Low Level: inputs and outputs are images
+- Image Processing(Low): inputs and outputs are images(enhancement, compression, feature detection, restoration, noise removal, etc).
 
-- Mid Level : outputs are attributes extracted from images
+- Image Analysis(Mid) : outputs are attributes extracted from images(matching, segmentation, registration, etc).
 
-- High Level : an ensemble of objects extracted from images
+- Computer Vision(High) : an ensemble of objects extracted from images(Object detection, object recognition, shape analysis, object tracking, etc).
 
-## The Work flow of Image Processing
+## The Work Flow of Image Processing
 
 The core concept of image processing is taking an image and returning an image ie,
 
@@ -44,7 +44,7 @@ Going into depth, the process has 5 parts :
 - Image Acquisition and Preprocessing : The first step of the process, this is about selecting our images.
 
 - Image Segmentation and Analysis : Extracting certain regions of an image and analyzing the objects in them, the 
-*Semantics* of the image, and its description.
+*semantics* of the image, and its description.
 
 - Feature Extraction : Extracting some characteristics from an image for a certain purpose.
 
@@ -62,5 +62,21 @@ operation.
 - MATLAB(or another similar software). It's what we are going to be mostly use for experimenting.
   
 
+## Some Applications of Image Processing
+
+There are many real world applications in image processing in many fields such as: 
+
+- Medicine : Such as Histogram Stretching, Noise Cleanup, Tumor Detection, etc, on Medical Images(X-ray, MRI, etc). 
+
+- Biology : Such as Organism Recognition, Clarifying Microscopic Images, etc.
+
+- Security and Biometrics : Face Recognition, Fingerprint Recognition, Iris Recognition, etc.
+
+- Astronomy : Identifying Galaxies.
+
+- GIS(Geographic Information Systems): Hurricane Recognition in Meteorology.
+
+- Law Enforcement : Speed Cameras, Plate Recognition, Face Recognition, Fingerprint Recognition, Gesture Recognition. 
+ 
 
 
