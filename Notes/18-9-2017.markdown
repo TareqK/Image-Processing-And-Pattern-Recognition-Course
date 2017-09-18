@@ -74,7 +74,7 @@ There are many real world applications in image processing in many fields such a
 
 - Astronomy : Identifying Galaxies.
 
-- GIS(Geographic Information Systems): Hurricane Recognition in Meteorology.
+- GIS(Geographic Information Systems) : Hurricane Recognition in Meteorology.
 
 - Law Enforcement : Speed Cameras, Plate Recognition, Face Recognition, Fingerprint Recognition, Gesture Recognition,
 Suspect Tracking, etc. 
