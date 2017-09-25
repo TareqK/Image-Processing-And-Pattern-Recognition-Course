@@ -173,23 +173,22 @@ ie the current sensitivity of the visual system.
 - Perceived intensity of a region is related to the light intensities of the regions around it. 
 Perceived brightness is not a simple function of intensity. The Visual system tends to overshoot 
 or undershoot around the boundary of regions of different intensities. 
-  - One phenomena to demonstrate this is the mach band 
+  - One phenomena to demonstrate this is the mach band,where we see concaveness around the boundaries between the stripes even though 
+  they are of constant brightness
   
-![mach band](http://www.ucalgary.ca/pip369/files/pip369/MachBands.jpg) 
+  ![mach band](http://www.ucalgary.ca/pip369/files/pip369/MachBands.jpg) 
 
-where we see concaveness around the boundaries between the stripes even though 
-they are of constant brightness. 
 
   - Another Phenomena is simultaneous contrast, 
-    where a color seems lighter or darker depending on the surrounding region. 
+    where a color seems lighter or darker depending on the surrounding region
     
-    ![simeltaneeous contrast](http://www.johnpaulcaponigro.com/blog/http://www.johnpaulcaponigro.com/blog/wp-content/themes/zinfandel-blue-10/images/lightdark.jpg)
+   ![simeltaneeous contrast](http://www.johnpaulcaponigro.com/blog/http://www.johnpaulcaponigro.com/blog/wp-content/themes/zinfandel-blue-10/images/lightdark.jpg)
 
   - Yet Another Phenomena is optical illusions, where objects seem larger, smaller, moving, or cause us 
     to perceive things that aren't there because of how the visual system works(and fills in stuff that isnt there sometimes). An example is this 
     trippy picture.
     
-    ![trippy picture](http://www.optics4kids.org/osa.o4k/media/optics4kids/snakes.gif?width=400&height=388&ext=.gif)
+   ![trippy picture](http://www.optics4kids.org/osa.o4k/media/optics4kids/snakes.gif?width=400&height=388&ext=.gif)
 
 ##### Light and the Electromagnetic spectrum
 - Light is a (very small) part of the Electromagnetic Spectrum that can be sensed by the human eye(400nm to 700nm). 
@@ -257,7 +256,7 @@ it can be summarized by
 
 > f(x,y)=i(x,y)r(x,y)
 
-where ```i``` is the *illumination* and ```r``` is the reflectivity.
+where ```i``` is the *illumination* and ```r``` is the *reflectivity* of the object at that point.
 
 - Sensors used in acquisition produce a continuous voltage signal. A Digital 
 sensor can only measure a limited number of samples at a discrete set of energy 
