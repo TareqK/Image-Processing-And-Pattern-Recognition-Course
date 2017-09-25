@@ -240,11 +240,13 @@ source by the clements of the "scene" being imaged ie, to create an image, we ne
 ##### Sensing
 there are three arrangements of sensors :
 
-1. Single Imaging Sensors : They are used for IR data transmission.
+1. Single Imaging Sensors : Just a singular sensor on its own. an Example
+of its usage is for IR data transmission.
 
-2. Line Imagining Sensors : They are used in Flatbed Scanners and Bar code readers.
+2. Line Imagining Sensors : A Group of sensors in a Line. An example of their usage is in Flatbed Scanners and Bar code readers.
 
-3. Array Sensors : Used in DSLR or Phone Cameras .
+3. Array Sensors : A Group Sensors in an array Used in DSLR or Phone Cameras(Square) or 
+MRI(Round).
  
 In all cases, incoming light lands on a sensor material responsive 
 to that type of energy, generating a voltage.
