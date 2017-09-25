@@ -174,17 +174,21 @@ ie the current sensitivity of the visual system.
 Perceived brightness is not a simple function of intensity. The Visual system tends to overshoot 
 or undershoot around the boundary of regions of different intensities. 
   - One phenomena to demonstrate this is the mach band 
+  
 ![mach band](http://www.ucalgary.ca/pip369/files/pip369/MachBands.jpg) 
+
 where we see concaveness around the boundaries between the stripes even though 
 they are of constant brightness. 
 
   - Another Phenomena is simultaneous contrast, 
     where a color seems lighter or darker depending on the surrounding region. 
+    
     ![simeltaneeous contrast](http://www.johnpaulcaponigro.com/blog/http://www.johnpaulcaponigro.com/blog/wp-content/themes/zinfandel-blue-10/images/lightdark.jpg)
 
   - Yet Another Phenomena is optical illusions, where objects seem larger, smaller, moving, or cause us 
     to perceive things that aren't there because of how the visual system works(and fills in stuff that isnt there sometimes). An example is this 
-    trippy picture
+    trippy picture.
+    
     ![trippy picture](http://www.optics4kids.org/osa.o4k/media/optics4kids/snakes.gif?width=400&height=388&ext=.gif)
 
 ##### Light and the Electromagnetic spectrum
