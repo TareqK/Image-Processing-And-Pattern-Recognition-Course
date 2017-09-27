@@ -1,5 +1,6 @@
 # Image Representation and Interpolation 
-## Representing Images
+
+## Image Representation
 
 ### What is an Image to the Computer?
 
@@ -33,7 +34,9 @@ with a value between 0-255(usually).
 
 > (x\*y\*Intensity Level Resolution)
 
-- Noise Level : Noise is the grainy texture pattern in images. This is effected by 
+#### Noise Level
+
+Noise is the grainy texture pattern in images. This is effected by 
 multiple factors such as ISO, Blur, contrast, etc. We must be mindful 
 of what might cause it and try to reduce it to an acceptable level for
 our use. Its **not** a measured value, but rather a phenomenon in 
