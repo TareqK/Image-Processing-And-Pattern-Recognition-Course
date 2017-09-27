@@ -2,3 +2,5 @@
 ![Introduction](./Notes/introduction.markdown)
 
 ![How Do We and the Computer See?](./Notes/howDoWeAndTheComputerSee.markdown)
+
+![Image Representation and Interpolation](./Notes/imageRepresentationAndInterpolation.markdown)
