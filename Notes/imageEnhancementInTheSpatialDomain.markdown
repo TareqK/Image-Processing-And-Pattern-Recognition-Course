@@ -1,10 +1,10 @@
 # Image Enhancement in the Spatial Domain
 
-Some images might be too dark, or too bright, or too noisy. Here, we can
-use image enhancement techniques to improve these images. These are simple
+Some images might be too dark, or too bright, or too noisy. The goal of 
+**Image Enhancement** is to improve these images. These are simple
 **manipulations** on the image, that will help us improve the contrast and remove the noise.
 We do this both when we want to make images look better for human consumption
-or for computer vision.
+and help highlight regions of interest for computer vision.
 
 Image Enhancement is different from image restoration, in that image restoration
 aims at restoring an image to its original form/fixing degradation
@@ -75,11 +75,11 @@ pixel in the image . In this case :
 Where S is the pixels in the output image , r 
 is the pixels in the input image, T is the transform.
 
-An example of point processing is Thresholding, where all pixels with gray level 
+An example of point processing is **Thresholding**, where all pixels with gray level 
 above a certain level are turned to white, and all pixels under that 
-level are turned black, Or Contrast stretching where all values of r lower than k are 
+level are turned black, Or **Contrast stretching** where all values of r lower than k are 
 compressed(decreased) into a narrow range of s towards black, while all
-values of r higher than k are stretched(increase) towards white.
+values of r higher than k are stretched(increased) towards white.
 
 
 ## Intensity Transformations 
@@ -92,25 +92,30 @@ values of r higher than k are stretched(increase) towards white.
 
 - 1D function to translate input to output.
 
+- The process consists of moving the origin of the neighborhood from pixel to 
+pixel and applying T on the neighborhood 1x1
 
-## Types of Transformations
+There are many functions to do this.
+
+### Intensity Transformation Functions
 
 - Linear Transformations :
   - Identity Transformation : S = r.
 
-  - Negative Transformation : S = L - r, where L is the maximum value in 
+- Negative Transformation : S = L - r, where L is the maximum value in 
   the spatial domain(max intensity in grayscale, for example).
-    - Inverse of an inverse is the original image.
-    - Useful in the medical field.
+   - Inverse of an inverse is the original image.
+   - Useful in the medical field.
 
 - Logarithmic Transformations :
 
-  - General Formula : s = c*log\(r+1).
+  - General Formula : s = c\*log\(r+1).
     - c is determined by us. Usually it is 1.
 	- We assume r&ge;1, because we cant calculate log(0).
   
-  - Maps a narrow range of low intensity in the input in a wider level 
-   of the output.
+  - Maps a narrow range of low intensity in the input to a wider range
+    at output.
+    - The opposite is true the higher the intensity values of the input 
    
   - Used to expand the value of dark pixels while compressing higher level 
 	values.
@@ -119,11 +124,41 @@ values of r higher than k are stretched(increase) towards white.
   - Compresses the dynamic range of images with large variation in pixel
   values
     - A classic example of images with pixels with large dynamic range values
-     are Fourier spectrum images(0-1.5*10^6 possible values). When these valus
+     are Fourier Spectrum images(more than 10^6 possible values). When these values
      are scaled linearly, the brightest pixels dominate the display, while 
      the lower values are lost. Therefore, we apply the log transform 
-     to them, decreasing the range(applying log transfrom with c=1 results
-     in 0-6.2 values).
+     to them, decreasing the range(applying log transform with c=1 on a spectrum 
+     with 1.5*10^6 values results in 0-6.2 values).
      
-  - We cannot see the significant degree of detail as it will be lost 
-  in the display.
+	- As a results, We cannot see the significant degree of detail as it will be lost 
+	  in the display.
+
+- Exponential Transformation :
+  - General Formula : s = c*r<sup>&gamma;</sup>
+  
+  - Based on the value of &gamma;, we get different functions mapping the input
+  to the output.
+  
+  - Using fractional values maps a narrow range of dark input
+   values to a wider range of output vales.
+    - The Opposite is true of higher values.
+	- &gamma; = 1 gives us the identity function.
+
+  - Unlike log function, we get a number of transformation curves can 
+  be obtained by varying &gamma;.
+    
+  - Used for [Gamma Correction](https://en.wikipedia.org/wiki/Gamma_correction#Windows.2C_Mac.2C_sRGB_and_TV.2Fvideo_standard_gammas).
+	
+	- Gamma Correction inverts the darkening operation due to some properties in the image
+	
+	- Mostly happens in CRT monitors.
+	
+	- If we don't do it , the picture will either be too dark or bleached out.
+	
+	- Done before inputing the image to the screen.
+	
+	- Trying to reproduce colors accurately also requires knowledge of gamma 
+	correction since it changes not just the intensity, but also the ratio
+	of R:G:B.
+	  
+	  ![Example Of Gamma Correction](https://image.slidesharecdn.com/04imageenhancementinspatialdomain-130831074136-phpapp01/95/04-image-enhancement-in-spatial-domain-dip-10-638.jpg?cb=1377934957)
