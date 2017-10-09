@@ -162,3 +162,5 @@ There are many functions to do this.
 	of R:G:B.
 	  
 	  ![Example Of Gamma Correction](https://image.slidesharecdn.com/04imageenhancementinspatialdomain-130831074136-phpapp01/95/04-image-enhancement-in-spatial-domain-dip-10-638.jpg?cb=1377934957)
+
+  - Also Used for general purpose contrast manipulation.
