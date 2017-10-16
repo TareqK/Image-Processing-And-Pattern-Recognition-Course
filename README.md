@@ -6,3 +6,6 @@
 ![Image Representation and Interpolation](./Notes/imageRepresentationAndInterpolation.markdown)
 
 ![Image Enhancement in the Spatial Domain](./Notes/imageEnhancementInTheSpatialDomain.markdown)
+
+
+![Histograms](./Notes/histograms.markdown)

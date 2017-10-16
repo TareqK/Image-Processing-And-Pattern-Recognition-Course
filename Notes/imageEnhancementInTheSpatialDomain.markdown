@@ -163,4 +163,41 @@ There are many functions to do this.
 	  
 	  ![Example Of Gamma Correction](https://image.slidesharecdn.com/04imageenhancementinspatialdomain-130831074136-phpapp01/95/04-image-enhancement-in-spatial-domain-dip-10-638.jpg?cb=1377934957)
 
+
+	- If we decrease gamma too much, the image begins to loose contranst
+	and is said to be "washed out".
+
   - Also Used for general purpose contrast manipulation.
+  
+- Piecewise Linear Transformation : 
+	- More complex(arbitrarily more complex)
+	- used for contrast stretching, gray-scale slicing, Bit-Plane slicing.
+      
+      - Contrast Stretching : 
+		- Simplest piecewise function.
+		- Improves contrast by stretching intensity values to a span of a desired
+		range of values.
+		- Automatic contrast Adjustment:
+		  
+		  1. Point operation that modifies pixels 
+		  such that the available range of values is fully covered.
+		  
+		  2. Algorithm : 
+		     a. Find highest and lowest pixel intensities
+		     b. Linear stretching of intensity range.
+		     
+		 
+	  - Gray-Level Slicing : 
+	    - Highlights a specific range of gray levels in an image
+	    - Display a high value of gray level in the range of interest and a
+	    low value off all other gray levels
+
+	  - Bit Plane Slicing :
+		- Highlights the contribution of specific bits to the 
+		  appearance of the image.
+		  - Supposed Each pixel is represented by 8 bits
+		  - lower bits correspond to fine details while higher bits
+		  correspond to global image details.
+		  - Higher plane = most significant bit.
+		  - Useful in image compression.
+		
