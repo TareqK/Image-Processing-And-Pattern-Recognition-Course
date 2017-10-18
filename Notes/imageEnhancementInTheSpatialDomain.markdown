@@ -75,6 +75,10 @@ pixel in the image . In this case :
 Where S is the pixels in the output image , r 
 is the pixels in the input image, T is the transform.
 
+Some operations include addition(p+k), Multiplication(pxk), and subtraction(p-k)
+of pixel values.
+
+
 An example of point processing is **Thresholding**, where all pixels with gray level 
 above a certain level are turned to white, and all pixels under that 
 level are turned black, Or **Contrast stretching** where all values of r lower than k are 

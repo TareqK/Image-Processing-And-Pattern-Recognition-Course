@@ -7,5 +7,4 @@
 
 ![Image Enhancement in the Spatial Domain](./Notes/imageEnhancementInTheSpatialDomain.markdown)
 
-
 ![Histograms](./Notes/histograms.markdown)
