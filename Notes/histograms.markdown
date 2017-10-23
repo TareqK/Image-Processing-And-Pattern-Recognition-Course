@@ -75,7 +75,7 @@ is (1/L-1) to get a pixel value.
 		note that, given that T is strictly monotonically increasing, ie if x &gt; y, then T\(x\) &gt; T\(y\), there is a 
 		T<sup>-1</sup>\(s\) that returns r.
 		
-   3. s = T\(r\) = (L-1) <sub>0</sub>&int;<sup>r</sup> P<sub>r</sub>\(r\).
+- s = T\(r\) = (L-1) <sub>0</sub>&int;<sup>r</sup> P<sub>r</sub>\(r\).
    
 		- There should be a bunch of integrations and probability equations to prove this, look at the course book for the details.
 		  Long story short, its a probability thing, where we look at all values to determine the transformation of a certain value.
@@ -92,3 +92,57 @@ cumulative distribution function equals 1 when 0 &le; r &le; L.
     spread evenly.
 
 ### Histogram Matching
+
+- In histogram matching, we can specify the shape of the target histogram we want the output
+image to have. This is especially useful for domains where histogram equalization will 
+result in a distorted image.
+
+- We use the same method used in derving the transformation function of the 
+histogram equalization to find the transformation function for the desired histogram, however:
+
+  - We need P<sub>s</sub>(s) in mathematic form and the ability to express s in terms of r.
+  
+  - doesn't result in a uniform histogram.
+  
+  - Its a trial and error process. 
+ 
+  - its a mapping operation, but is **not 1-to-1**.
+  
+    - Typically, we chose the mapped value closest to the original to 
+    produce less deformation.
+    
+    - The functions have to be increasing, because we dont want to flip pixel values.
+  
+- The process is as follows **INSERT IMAGE HERE**
+
+
+- Algorithm :
+
+	- Apply histogram equalization to the input, we gets = T\(r\).
+	
+	- Apply histogram equalization of the target, we get s = G(z).
+	
+	- Obtain the inversed transformation function 
+	
+	- Obtain the output by applying the function to the image pixel values.
+	
+	 > z = G<sup>-1</sup>(s) = G<sup>-1</sup>(T\(r\))
+	
+	or we can use **Discrete Formulation** :
+	
+	> s<sub>k</sub>=T(r<sub>k</sub>)=(L-1)&Sigma;<sup>k</sup><sub>j=0</sub>  P<sub>r</sub>(r<sub>j</sub>)
+	
+	- find  s<sub>k</sub> for r, and get an approximate of T\(r\).
+	
+	- find s<sub>k</sub> for z, and get an approximate of G(z).
+	
+	- Approximate the inverse function.
+	
+	- Obtain the output by applying the function to the image pixel values.
+	
+## Local Histogram Processing
+
+We can apply histogram operations to certain sections of an image rather than a whole 
+image. this is especially useful for filtering, blurring, coloring, etc certain 
+parts of an image. **We specify a neighborhood (m*n) around (x,y), construct the histogram,
+and any transformation functions on it**.
