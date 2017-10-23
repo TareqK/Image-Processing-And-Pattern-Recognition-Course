@@ -77,8 +77,8 @@ is (1/L-1) to get a pixel value.
 		
 - s = T\(r\) = (L-1) <sub>0</sub>&int;<sup>r</sup> P<sub>r</sub>\(r\).
    
-		- There should be a bunch of integrations and probability equations to prove this, look at the course book for the details.
-		  Long story short, its a probability thing, where we look at all values to determine the transformation of a certain value.
+  - There should be a bunch of integrations and probability equations to prove this, look at the course book for the details.
+    Long story short, its a probability thing, where we look at all values to determine the transformation of a certain value.
 
 - Histogram Equalization distributes the gray level to reach the maximum gray level white because the 
 cumulative distribution function equals 1 when 0 &le; r &le; L.
