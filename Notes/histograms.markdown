@@ -146,3 +146,118 @@ We can apply histogram operations to certain sections of an image rather than a 
 image. this is especially useful for filtering, blurring, coloring, etc certain 
 parts of an image. **We specify a neighborhood (m*n) around (x,y), construct the histogram,
 and any transformation functions on it**.
+
+**TODO INSERT MISSING LECTURE**
+
+## Smoothing Spatial Filter
+
+#### Average Smoothing
+
+We have a mask matrix size of n\*n with values (1/n) and a pixel neighborhood n\*n. The value 
+of each pixel at the center of n\*n is given by 
+
+f(p) = &sum;<sup>n</sup>&sum;<sup>m</sup>filter\[n\]\[m\]\*neighborhood\[n\]\[m\]
+
+#### Weighted Smoothing
+
+Same as above, except the mask can have different values (x/y) so as long 
+as they add up to 1.
+This way we can give more weight to the pixels at the center or the side. 
+
+#### The Identity Mask 
+
+The identity mask is a mask that has a value of 1 at the center and 0 everywhere else.
+applying this mask results in no changes to the image.
+
+
+Smoothing highlights **gross details**, that is the larger
+details in an image. This could be useful in segmentation.
+
+Smoothing Spatial filters can be used to remove noise and make 
+images clearer(for example, when there is salt-and-pepper noise).
+
+## Sharpening Filters
+
+Sharpening is the opposite of smoothing. The purpose is to highlight
+transitions in intensity. It is useful in fields such as medical imaging,
+feature extraction, feature enhancement, and industrial inspection. 
+
+Image blurring is done by pixel averaging. Averaging is analogous to 
+integration. Therefore, it is logical to conclude that sharpening 
+is analogous to differentiation. 
+
+we are concerned about the behaviour of 1st and 2nd derivatives in the 
+areas of constant intensity, onset and end of discontinuities, and intensity 
+maps.
+
+#### Properties of the First Derivative
+
+1. Zero in areas of constant intensity.
+2. Nonzero at the onset of a step and a ramp.
+3. Nonzero along the intensity ramp.
+4. df/dx = f(x+1)-f(x)
+
+
+#### Properties of the Second Derivative
+
+1. Zero in areas of constant intensity 
+2. Nonzero at the onset of a step and a ramp.
+3. zero along the intensity ramp.
+4. d^2 f/dx^2 = df(x+1)/dx - df(x)/dx
+
+### Laplacian Image Sharpening
+
+We have the equation 
+
+&Delta;<sup>2</sup>f(x,y) = f(x+1,y)-f(x-1,y)+f(x,y+1)+f(x,y-1)-4f(xy)
+
+To find the 2nd derivative using the partial derivatives of X and Y.
+
+Computing the Laplacian doesn't produce a sharpened image. It produces
+images that have the grayish edge lines and other discontinuities over a black background. 
+It is common practice to scale the laplacian image to \[0-255\]
+
+If the definition(the neighborhood we are working in) has a negative 
+center coefficient, we subtract the laplacian from the image.
+Otherwise, we add the laplacian to the image.
+
+> g(x,y)=f(x,y)+c\[&Delta;<sup>2</sup>f(x,y)\]
+
+This can be applied in a single step by
+
+> g(x,y) = 5f(x,y)-\[f(x+1,y)-f(x-1,y)+f(x,y+1)+f(x,y-1)\]
+
+#### Unsharp Masking & High-Boost Filtering
+
+It is a process used in the printing industry to sharpen images
+
+Steps :
+1. Blur the original image
+2. Subtract the blurred image from the original(mask)
+3. Add the (weighted portion)mask to the original 
+
+ie, We extract the gross details then emphasize them to a certain degree.
+This is given by this pair of equations.
+
+> g<sub>mask</sub>(x,y)=f(x,y)-f\`(x,y)
+>
+> g(x,y)= f(x,y)+k\*g<sub>mask</sub>(x,y),k  &le; 1
+
+Choosing k &gt; 1 results in **High-Boost Filtering**, which could 
+result in losing detail depending on the domain and the image itself.
+
+#### Sharpening Using the first derivative
+
+&Delta;f is a vector that points towards the greater rate of change.
+it is given by |partial&delta;(x)-partial&delta;(y)|
+
+Gradients(&Delta;) are used widely in industrial inspection because it produces
+thicker edges in the result which makes it easier for machines to detect
+artifacts. 
+
+### Non-Linear Spatial Filters(Order-static)
+
+These are filters are filters whose response is based on the original 
+value of the pixel at the center of the neighborhood. An Example of this
+is the **median filter**. These are especially useful in removing
+salt-and-pepper noise
