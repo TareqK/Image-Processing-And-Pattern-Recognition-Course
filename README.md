@@ -8,3 +8,5 @@
 ![Image Enhancement in the Spatial Domain](./Notes/imageEnhancementInTheSpatialDomain.markdown)
 
 ![Histograms](./Notes/histograms.markdown)
+
+![Image Enhancement in the Frequency Domain](./Notes/imageEnhancementInTheFrequencyDomain.markdown)

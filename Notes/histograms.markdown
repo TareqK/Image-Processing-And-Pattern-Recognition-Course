@@ -261,3 +261,5 @@ These are filters are filters whose response is based on the original
 value of the pixel at the center of the neighborhood. An Example of this
 is the **median filter**. These are especially useful in removing
 salt-and-pepper noise
+
+
