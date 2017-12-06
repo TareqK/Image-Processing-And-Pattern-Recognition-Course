@@ -29,9 +29,11 @@ frequency domain. This means we take the fourier transform of the image first,
 do operations on that, then we perform the **inverse** fourier transform
 to get the resultant image.
 
-These methods enhance the image by convolution the image with a linear,
+These methods enhance the image by performing a convolution operation on the image with a linear,
 position invariant operator --> this means that the image will have the 
-same signature regardless of the position of the pixels in the image. **It is 
+same signature regardless of the position of the pixels in the image. They
+modify the distribution of the gray-level values. As a consequence, 
+the values of the pixels in the image change. It is important to know that **It is 
 possible for 2 images to have the same signature in the frequency domain**
 
 The Pixel values of the input image will be changed according to the transformation
@@ -39,13 +41,17 @@ function applied. For an image F and output G This is given by  :
 
 > s = T\(r\)
 
-The process is mostly done this way 
+where r and s represent the pixels in F and G respectively.
 
-> F(x,y) --> preprocessing --> Fourier Transform -->filter function -->inverse Fourier transform --> post-processing --> G(x,y)
+The process is as follows :
+
+> F(x,y) --> preprocessing(normalization) --> Fourier Transform --> Filter function --> Inverse Fourier Transform --> Post-Processing --> G(x,y)
 
 Alternatively, we can do this directly 
 
 > G(u,v) = H(u,v)F(u,v) 
+
+where H is the transfer function of the image.
 
 Using the frequency domain allows us to capture properties that are 
 not present in the spatial representation of the image, mainly the
@@ -55,8 +61,23 @@ shape and texture of the image.
 
 Frequency is formally defined as:
 
-> The number of times in a specified period that a phenomena occurs within a specified interval.
+> The number of times in a specified period that a 
+> phenomenon occurs within a specified interval.
 
 
+## The Fourier Transformation
+
+The basic principle is that any equation that repeats itself can 
+be expressed by the sum of sines and cosines in various frequencies.
+
+Essentially, its the sum of the different periods of a periodic function expressed
+as multiple sines.
+
+For example, Here is a Fourier transform for a sound wave:
+
+![fourier drawing](http://hearinghealthmatters.org/waynesworld/files/2012/06/Fourier-Analysis.gif)
+
+The more terms there are to the Fourier function(series), the closer the approximation 
+of the original(since we rarely get a perfectly periodic wave)
 
 
