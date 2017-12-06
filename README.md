@@ -9,4 +9,7 @@
 
 ![Histograms](./Notes/histograms.markdown)
 
+![Image Enhancement - Convolution](./Notes/convolution.markdown)
+
 ![Image Enhancement in the Frequency Domain](./Notes/imageEnhancementInTheFrequencyDomain.markdown)
+

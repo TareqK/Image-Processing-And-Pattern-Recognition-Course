@@ -39,16 +39,24 @@ function applied. For an image F and output G This is given by  :
 
 > s = T\(r\)
 
-The process is done thisway 
+The process is mostly done this way 
 
-> F(x,y) --> preprocessing --> Fourier Transform -->filter function -->inverse fourier transform --> post-processing --> G(x,y)
+> F(x,y) --> preprocessing --> Fourier Transform -->filter function -->inverse Fourier transform --> post-processing --> G(x,y)
 
-Alternatively, we can do this direty 
+Alternatively, we can do this directly 
 
-> G(u,v) = H(u,v)F(u,v)
+> G(u,v) = H(u,v)F(u,v) 
+
+Using the frequency domain allows us to capture properties that are 
+not present in the spatial representation of the image, mainly the
+shape and texture of the image. 
 
 ## Definition of frequency
 
-The number of times in a specified period that a phenomena occurs within a specified interval.
+Frequency is formally defined as:
+
+> The number of times in a specified period that a phenomena occurs within a specified interval.
+
+
 
 
