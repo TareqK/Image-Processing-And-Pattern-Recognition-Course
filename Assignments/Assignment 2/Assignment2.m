@@ -1,0 +1,10 @@
+pkg load image;
+x = imread("Pepper.jpg");
+h = [1 0 0 0; 0 1 0 0 ; 0 0 1 0; 0 0 0 1];
+y = imfilter(x,h);
+imshow(y);
+imwrite(y,"Pepper-Filter-1.jpg");
+j = [-1 -1 0; -1 0 1; 0 1 1];
+z = imfilter(x,j);
+imshow(z);
+imwrite(z,"Pepper-Filter-2.jpg");
