@@ -13,3 +13,5 @@
 
 ![Image Enhancement in the Frequency Domain](./Notes/imageEnhancementInTheFrequencyDomain.markdown)
 
+![Voice Summaries](./Voice)
+
